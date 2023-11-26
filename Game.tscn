@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://up41txww8qg1"]
+[gd_scene load_steps=11 format=3 uid="uid://up41txww8qg1"]
 
-[ext_resource type="Texture2D" uid="uid://bgk17llnfou8" path="res://Assets/sky.jpg" id="1"]
+[ext_resource type="Texture2D" uid="uid://dnj2v4s3bcfd0" path="res://Assets/sky.jpg" id="1"]
 [ext_resource type="PackedScene" uid="uid://btx461csnea1j" path="res://Player/Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://wcu16iwyywfm" path="res://Player/Zombie.tscn" id="3"]
+[ext_resource type="Script" path="res://Player/Zombie.gd" id="4_ai60y"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_30th5"]
 panorama = ExtResource("1")
@@ -44,6 +45,7 @@ transform = Transform3D(0.117433, 0, 0.993081, 0, 1, 0, -0.993081, 0, 0.117433, 
 
 [node name="Zombie" parent="." instance=ExtResource("3")]
 transform = Transform3D(-0.122701, 0, -0.992444, 0, 1, 0, 0.992444, 0, -0.122701, 5, 0, 0)
+script = ExtResource("4_ai60y")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 5, 10)
